@@ -1,23 +1,60 @@
-<html>
+<html ng-app>
 <head>
   <title>Four-day view</title>
 
   <link rel="stylesheet/less" type="text/css" href="./stylesheets/styles.less" />
   <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="./stylesheets/bootstrap-responsive.min.css">
 
-  <script type="text/javascript" src="./javascripts/jquery.min.js"></script>
-  <script type="text/javascript" src="./javascripts/jquery-ui.min.js"></script>
-
-  <script type="text/javascript" src="./javascripts/underscore.min.js"></script>
-  <script type="text/javascript" src="./javascripts/backbone.min.js"></script>
-
-  <script type="text/javascript" src="./javascripts/bootstrap.min.js"></script>
   <script type="text/javascript" src="./javascripts/less.js"></script>
 
+  <script type="text/javascript" src="./javascripts/angular.js"></script>
+  <script type="text/javascript" src="./controllers.js"></script>
+
 </head>
-<body>
 
-
+<body ng-controller="CatCtrlList" class="container">
+  <h1>My {{cats.length}} Cats</h1>
+  <hr>
+  <div class="row">
+    <div class="span4">
+      <form class="form">
+        <div class="control-group">
+          <label class="control-label">Search cats</label>
+          <div class="controls">
+            <input ng-model="query" placeholder="Name, age, or description">
+          </div>
+        </div>
+        <div class="control-group">
+          <label class="control-label">Sort by</label>
+          <div class="controls">
+            <select ng-model="orderProp">
+              <option value="name">Name</option>
+              <option value="age">Age</option>
+            </select>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="span8">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th colspan="2">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="cat in cats | filter:query | orderBy:orderProp">
+          <td>{{cat.name}}</td>
+          <td>{{cat.age}}</td>
+          <td>{{cat.description}}</td>
+          <td><img class="img-rounded" ng-src="./images/cats/{{cat.name}}.jpg"></td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
 </body>
+
 </html>

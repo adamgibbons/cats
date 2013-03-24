@@ -1,4 +1,2 @@
-tabula-rasa
-===========
-
-Just some local, minified javascript libraries and a blank HTML document at the ready.
+== Rational
+What better way to learn Angular.js than by organizing cats?!

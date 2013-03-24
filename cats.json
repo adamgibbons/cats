@@ -1,0 +1,53 @@
+[
+    
+    {
+        "name": "Winkin",
+        "age": 5,
+        "description": "furry and cuddly"
+    },
+    {
+        "name": "Blinkin",
+        "age": 3,
+        "description": "silly and happy"
+    },
+    {
+        "name": "Nod",
+        "age": 7,
+        "description": "jaded, dark, and cynical"
+    },
+    {
+        "name": "Steve",
+        "age": 14,
+        "description": "disturbingly human"
+    },
+    {
+        "name": "Drinky",
+        "age": 3,
+        "description": "never sober"
+    },
+    {
+        "name": "Ruby",
+        "age": 3,
+        "description": "red, hot, and red hot"
+    },
+    {
+        "name": "Whiskey",
+        "age": 3,
+        "description": "brown with limp"
+    },
+    {
+        "name": "Lumberjack",
+        "age": 5,
+        "description": "cat of the woods"
+    },
+    {
+        "name": "Angel",
+        "age": 20,
+        "description": "calico"
+    },
+    {
+        "name": "Scratch",
+        "age": 2,
+        "description": "always has an itch"
+        }
+ ]
