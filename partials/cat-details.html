@@ -1,0 +1,13 @@
+<h1>Get To Know {{cat.name}}</h1>
+<hr>
+<img ng-src="images/cats/{{cat.name}}.jpg">
+<dl>
+  <dt>Hobbies</dt>
+  <dd>{{cat.hobby}}</dd>
+  <dt>Favorite prey in the animal kingdom</dt>
+  <dd ng-repeat="victim in cat.favorite_prey">{{victim}}</dd>
+  <dt>Personal statement</dt>
+  <dd>{{cat.personal_statement}}</dd>
+</dl>
+
+<p><a ng-href="/cats">&laquo; Return to main menu</a></p>
